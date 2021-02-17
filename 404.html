@@ -67,6 +67,7 @@
         xhr.onerror = function () {
           location.replace(homepage);
         };
+        xhr.setRequestHeader("Authorization","token db4326f89ede4e5d2cb2abf597fbc31c873cc366")
         xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
         xhr.send();
       }
