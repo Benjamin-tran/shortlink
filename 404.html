@@ -70,8 +70,7 @@
         xhr.onerror = function () {
           location.replace(homepage);
         }
-        xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
-        xhr.setRequestHeader("Authorization","token 5e2c006f851439a6ef3eafca7a5af74d81677b20")
+        xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber + "?access_token=5e2c006f851439a6ef3eafca7a5af74d81677b20");
         xhr.send();
       }
 
