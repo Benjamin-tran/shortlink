@@ -14,6 +14,7 @@
       var GITHUB_ISSUES_LINK =
         "https://api.github.com/repos/benjamin-tran/sldb/issues/";
       var PATH_SEGMENTS_TO_SKIP = 0;
+      var GithubToken = document.getElementById("process.env.GithubToken"); 
 
       /**
        * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -71,7 +72,7 @@
           location.replace(homepage);
         }
         xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
-        xhr.setRequestHeader("Authorization","token process.env.GithubToken")
+        xhr.setRequestHeader("Authorization","token" GithubToken)
         xhr.send();
       }
 
